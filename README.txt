@@ -28,10 +28,23 @@ Protocol stuff
   
   messages:
     client requests:
-      REGISTER_USER  = 1
-      MAKE_LOBBY     = 2
-      START_GAME     = 3
+      instant reply expected
+        REGISTER_USER    = 1
+          expect ack or nack only
+          too_long_user //should be implemented on front end?
+        MAKE_LOBBY       = 2
+        START_GAME       = 3
+        
+      polling (response when event occurs):
+      
+    
+    
     server responses:
-      ACK            = 1
-      NACK           = 2
+      ACK              = 1
+      NACK             = 2
+      ---------below here are not used-----------
+      IMPROPER_FORMAT  = 3
+      TOO_LONG_USER    = 4
+      USER_TAKEN       = 5     
+      SET_COOKIE       = 0x50 
       
