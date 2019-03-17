@@ -26,7 +26,7 @@ Protocol stuff
     +----------------------------+----------------------------+----------------------------+----------------------------+
   
   
-  messages:
+  messages: enum class REQUEST or RESPONSE followed by .value in js and ::value in c++
     client requests:
       instant reply expected
         REGISTER_USER    = 1
@@ -42,9 +42,8 @@ Protocol stuff
     server responses:
       ACK              = 1
       NACK             = 2
-      ---------below here are not used-----------
       IMPROPER_FORMAT  = 3
-      TOO_LONG_USER    = 4
-      USER_TAKEN       = 5     
-      SET_COOKIE       = 0x50 
+      BAD_USERNAME     = 4
+      NO_COOKIE        = 5 
+      ---------below here are not used-----------
       
