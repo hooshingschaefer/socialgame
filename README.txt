@@ -33,7 +33,8 @@ Protocol stuff
           expect ack or nack only
           too_long_user //should be implemented on front end?
         MAKE_LOBBY       = 2
-        START_GAME       = 3
+        JOIN_LOBBY       = 3 //payload size field will instead be the lobby id (16 bits)
+        START_GAME       = 4
         
       polling (response when event occurs):
       
