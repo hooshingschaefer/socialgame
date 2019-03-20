@@ -3,6 +3,7 @@ DB stuff
   // userid corresponds to cookie and the username is the display name
   function register_user(char(16), varchar(40))
   checks if the cookie exists and inserts it, otherwise updates
+  table lobbies (id int primary key, name varchar(24), owner char(16) references users.id, num_players int )
 
 
 Protocol stuff
@@ -48,3 +49,7 @@ Protocol stuff
       NO_COOKIE        = 5 
       ---------below here are not used-----------
       
+      
+      
+thoughts:
+on polls respond every couple seconds or so to make sure user is still there but respond immediately if event occurred
